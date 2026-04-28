@@ -64,7 +64,7 @@ METHOD_COLORS = {
     "AlwaysRestricted":"#BDC3C7",   # light grey
     "MyopicEU":        "#2C3E50",   # charcoal
     "SARSOP_Misspec":  "#5D8AA8",   # steel blue (misspec ablation)
-    "SDP_S_Misspec":   "#3B10A57",   # hunter green (misspec ablation)
+    "SDP_S_Misspec":   "#2C5F34",   # hunter green (misspec ablation)
 }
 
 # Short display labels
