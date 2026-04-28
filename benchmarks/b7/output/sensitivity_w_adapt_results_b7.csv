@@ -1,0 +1,13 @@
+method,condition,eta,w_init,ucum_mean,ucum_sd,pfail,w_mean,w_final
+ELS_Phil_Adapt,stationary,0.10,0.50,1334.22,365.94,0.5950,0.5408,0.5817
+ELS_Phil_Adapt,nonstationary,0.10,0.50,1261.98,343.72,0.5750,0.5413,0.5880
+ELS_Int_Adapt,stationary,0.10,0.50,1287.22,340.66,0.5950,0.5519,0.5959
+ELS_Int_Adapt,nonstationary,0.10,0.50,1264.54,375.69,0.6700,0.5584,0.6196
+ELS_Phil_Adapt,stationary,0.50,0.50,1337.20,356.11,0.5750,0.6432,0.7560
+ELS_Phil_Adapt,nonstationary,0.50,0.50,1287.80,367.20,0.6350,0.6472,0.7676
+ELS_Int_Adapt,stationary,0.50,0.50,1272.83,365.12,0.6000,0.6644,0.7833
+ELS_Int_Adapt,nonstationary,0.50,0.50,1261.03,367.98,0.6400,0.6784,0.8274
+ELS_Phil_Adapt,stationary,1.00,0.50,1333.34,337.96,0.5650,0.6843,0.8138
+ELS_Phil_Adapt,nonstationary,1.00,0.50,1276.65,341.99,0.5950,0.7115,0.8486
+ELS_Int_Adapt,stationary,1.00,0.50,1247.30,373.14,0.6000,0.7030,0.8471
+ELS_Int_Adapt,nonstationary,1.00,0.50,1275.40,322.55,0.6500,0.7179,0.8586
