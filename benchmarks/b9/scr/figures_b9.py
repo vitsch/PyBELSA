@@ -27,7 +27,8 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 if _HERE not in sys.path:
     sys.path.insert(0, _HERE)
 
-from pomdp_env_b9 import T, GAMMA, SEED, FAILURE_STATE, 999
+from pomdp_env_b9 import T, GAMMA, SEED, FAILURE_STATE
+CLIMATE_SWITCH_STEP = 999  # B9 uses continuous interpolation — no discrete switch; sentinel keeps axvline off-plot
 from stats_analysis import (
     run_analysis, block_bootstrap_ci,
     N_BOOT, BLOCK_SIZE, SEED as STAT_SEED,
