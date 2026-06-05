@@ -138,20 +138,6 @@ Each `benchmarks/bN/` directory is self-contained: `els_methods.py`, `baselines.
 
 ---
 
-## Path Update Required Before Running Figures
-
-The figure scripts in `benchmarks/b1/scr/` reference sibling benchmark directories using paths calibrated to the original development layout (`P_Base`, `P_Base2`, …, `P_Base10`). Before running any figure script after deployment, update three lines:
-
-| Script | Line | Current value | Required value |
-|---|---|---|---|
-| `figures_fig1_price_robustness.py` | ~48 | `../P_Base{i}/output/` | `../b{i}/output/` |
-| `figures_uncertainty_type.py` | ~38–39 | `../P_Base4/output/`, `../P_Base7/output/` | `../b4/output/`, `../b7/output/` |
-| `figures_b10_comparison.py` | ~43 | `../P_Base10/output/` | `../b10/output/` |
-
-`figures_adapt_window.py` (Fig. 3) embeds its data directly — no path change needed.
-
----
-
 ## Installation
 
 **Requirements:** Python ≥ 3.11
@@ -322,27 +308,6 @@ All pre-computed outputs verified on 2026-04-27 (Python 3.13, numpy 2.4.3, scipy
 
 ---
 
-## Residual Tasks Before Final Deposit
-
-| Item                   | Status                               | Action required                                             |
-| ---------------------- | ------------------------------------ | ----------------------------------------------------------- |
-| Figure script paths    | 3 one-line edits needed              | Apply path updates (table above) before push                |
-| `bootstrap_ci_all.csv` | ✓ Generated 2026-04-27               | Deposit on Zenodo with full data archive                    |
-| B2 SARSOP P_fail       | ✓ Extracted 2026-04-28               | Use values below in paper tab:crossbenchmark (`†` cell)     |
-| Zenodo DOI             | Not required for 1st submission            | GitHub URL substituted throughout `_5R4.tex`; "to be deposited upon acceptance" language in §5/§6/SI-F.1; reserve DOI and deposit after acceptance |
-| CPU / RAM spec         | ✓ Resolved 2026-04-28                | Added to Evaluation Protocol table above and paper §4.5 (Python 3.13, i7-14700F, 64 GB) |
-
-**B2 SARSOP extracted values** (from `raw_results_b2.npz`, B = 2000 bootstrap, SEED = 2066):
-
-| Condition | U_cum mean | 95 % CI | P_fail mean | 95 % CI |
-|---|---|---|---|---|
-| Stationary | 1281.5 | [1255.6, 1308.0] | 0.260 | [0.215, 0.310] |
-| Nonstationary | 1181.6 | [1153.2, 1208.9] | 0.430 | [0.350, 0.500] |
-
-SARSOP_Misspec (stationary): U_cum = 1251.5, P_fail = 0.300 [0.260, 0.345].
-
----
-
 ## Data Availability
 
 All pre-computed Monte Carlo results are included in this repository under `benchmarks/bN/output/raw_results_bN.npz`. These files are the authoritative source for all reported U_cum, P_fail, and regret values (γ = 0.97, N_MC = 200, SEED = 2024; bootstrap B = 2000, SEED = 42).
@@ -356,9 +321,9 @@ A supplementary deposit including `bootstrap_ci_all.csv` will be made available 
 If you use PyBELSA in your research, please cite:
 
 ```
-Jakaite, L. and Schetinin, V. (2026). BELSA: Bayesian Epistemic Logic for Sustainable Aquifers —
-a decision framework for groundwater management under deep transition-model uncertainty.
-Nature Water. [under review]
+Jakaite, L. and Schetinin, V. (2026). An empirical crossover law for model-agnostic POMDP
+policies under transition-model misspecification.
+Nature Machine Intelligence. [under review]
 ```
 
 ---
